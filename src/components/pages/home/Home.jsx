@@ -2,6 +2,7 @@
 import { Box } from '@mui/material';
 import Proyectos from '../proyectos/Proyectos';
 import { useEffect, useState } from 'react';
+import NavBar from '../../commond/navBar/NavBar';
 
 
 const Home = () => {
@@ -40,8 +41,10 @@ const Home = () => {
           opacity: isTitleVisible ? 1 : 0, transition: 'opacity 0.3s' 
         }}
       >
-        <img  width={"600px"} src="public/imagenes/OWblanco.png" alt="" />
+        <img  width={"600px"} src="public/imagenes/owblanco.png" alt="" />
       </Box>
+      
+      <NavBar/>
       <Proyectos />
       
     </>
