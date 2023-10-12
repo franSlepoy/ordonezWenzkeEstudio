@@ -1,5 +1,5 @@
 
-import { Box } from '@mui/material';
+import { Box, Hidden } from '@mui/material';
 import Proyectos from '../proyectos/Proyectos';
 import { useEffect, useState } from 'react';
 import NavBar from '../../commond/navBar/NavBar';
@@ -23,6 +23,7 @@ const Home = () => {
 
   return (
     <>
+      
       <Box sx={{ zIndex: 3 }}>
         <img
           height="766px"
