@@ -12,7 +12,7 @@ const StudioContainer = () => {
       sx={{
         borderLeft: "solid black 1px",
         borderRight: "solid black 1px",
-        p: 4,
+        p: {md:4 , xs:1},
       }}
     >
       <div>

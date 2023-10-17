@@ -3,14 +3,15 @@ import owstyles from "./OW.module.css";
 
 const OW = () => {
   return (
-    <Box sx={{ display: "flex", gap: 1 }}>
+    <Box sx={{ display: { md: "flex", xs: "column" }, gap: 1 }}>
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
           fontFamily: "'Work Sans', sans-serif",
-          borderRight: "solid .2px",
-          padding: "0 30px 30px 0",
+          borderRight: { md: "solid .2px", xs: "none" },
+          borderBottom: { md: "none", xs: "solid .2px" },
+          padding: { md: "0 30px 30px 0", xs: "0 0 30px 0" },
         }}
       >
         <h2 style={{ textAlign: "center", fontSize: "100px", fontWeight: 100 }}>
@@ -20,7 +21,7 @@ const OW = () => {
           Florencia Ordoñez graduated in architecture from the Faculty of
           Architecture, Design and Urbanism of the University of Buenos Aires
           (FADU, UBA) where she specialized in furniture design under the
-          direction of professor Ricardo Blanco. .
+          direction of professor Ricardo Blanco.
         </p>
         <p className={owstyles.parrafos}>
           In 2007 she founded estudio Nidolab together with Sol García del Río
@@ -62,6 +63,7 @@ const OW = () => {
           flexDirection: "column",
           fontFamily: "'Work Sans', sans-serif",
           pl: "20px",
+          padding: { md: "0 30px 30px 0", xs: "0 0 30px 0" },
         }}
       >
         <h2 style={{ textAlign: "center", fontSize: "100px", fontWeight: 100 }}>

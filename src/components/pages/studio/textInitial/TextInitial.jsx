@@ -1,16 +1,9 @@
+import stylesTextInitial from "./TextInitial.module.css"
+
 const TextInitial = () => {
   return (
     <p
-      style={{
-        fontFamily: "'Libre Baskerville', serif",
-        fontFamily: "'Playfair Display', serif",
-        fontSize: "42px",
-        lineHeight: "54px",
-        letterSpacing: "1px",
-        paddingBottom: "45px",
-        borderBottom: "1px solid #1d1d1d",
-        marginBottom: "45px",
-      }}
+     className={stylesTextInitial.parraf}
     >
       OrdoñezWenzke is an international studio for architecture and interior
       design based in Buenos Aires. Studio OW was established in 2017 by
