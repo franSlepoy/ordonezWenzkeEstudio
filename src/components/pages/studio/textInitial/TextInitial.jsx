@@ -1,0 +1,31 @@
+const TextInitial = () => {
+  return (
+    <p
+      style={{
+        fontFamily: "'Libre Baskerville', serif",
+        fontFamily: "'Playfair Display', serif",
+        fontSize: "42px",
+        lineHeight: "54px",
+        letterSpacing: "1px",
+        paddingBottom: "45px",
+        borderBottom: "1px solid #1d1d1d",
+        marginBottom: "45px",
+      }}
+    >
+      OrdoñezWenzke is an international studio for architecture and interior
+      design based in Buenos Aires. Studio OW was established in 2017 by
+      Argentinian architect Florencia Ordoñez and German architect Dipl.Ing. Nik
+      Wenzke. Studio OW is distinguished by its interdisciplinary approach to
+      the respective conditions and dynamics of each project. With experience
+      and flexibility, the studio adapts to a variety of scales and challenges.
+      A constant search for pure morphologies and for functional and novel
+      spaces unites the partners and their expertise, to guarantee smart
+      solutions for even the most demanding concepts and projects. Over time,
+      this way of working together has developed into a signature style. It
+      forms the basis for every new project to achieve outstanding results that
+      are as original as they are personal.
+    </p>
+  );
+};
+
+export default TextInitial;
