@@ -11,7 +11,7 @@ const Proyectos = () => {
         <ImageList variant="classic" cols={3} gap={0}>
           {ProyectosData.map((item) => (
             <ImageListItem key={item.id} onMouseEnter={() => setHoveredItem(item)} onMouseLeave={() => setHoveredItem(null)}>
-              <a href={`/descripcion/${item.id}`} style={{ textDecoration: 'none', position: 'relative' }}>
+              <a href={"/description"} style={{ textDecoration: 'none', position: 'relative' }}>
                 <Box
                   sx={{
                     p: 4,
@@ -36,7 +36,7 @@ const Proyectos = () => {
                         
                         }}
                     >
-                      <Typography sx={{fontFamily:"Work Sans ", textAlign:"center", fontSize:"16px", color:"black"  }} > 
+                      <Typography sx={{fontFamily:"Work Sans ", textAlign:"center", fontSize:"16px", color:"black", p:10  }} > 
                       {item.titulo}
                       </Typography>
                       
