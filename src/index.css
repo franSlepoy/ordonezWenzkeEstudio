@@ -9,6 +9,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
-    
+}
+
+@font-face {
+  font-family: 'PoynterOSDisp';
+  src: url('../public/fonts/PoynterOSDispRoman.ttf') format('truetype');
+  /* Puedes especificar más formatos aquí si lo deseas, como woff2, woff, etc. */
+}
+
+body {
+  font-family: 'PoynterOSDisp', sans-serif;
 }
