@@ -8,7 +8,6 @@ const InfoContact = () => {
         display: "flex",
         flexDirection: { md: "row", xs: "column" },
         justifyContent: "space-around",
-        fontFamily: "'Libre Baskerville', sans-serif",
       }}
     >
       <Box
