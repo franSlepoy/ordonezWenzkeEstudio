@@ -2,6 +2,7 @@ import { Box, Hidden } from "@mui/material";
 import Proyectos from "../proyectos/Proyectos";
 import { useEffect, useState } from "react";
 import NavBar from "../../commond/navBar/NavBar";
+import StudioContainer from "../studio/StudioContainer";
 
 const Home = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -47,6 +48,8 @@ const Home = () => {
 
       <NavBar />
       <Proyectos />
+      <StudioContainer />
+      
     </>
   );
 };
