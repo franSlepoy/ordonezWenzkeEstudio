@@ -4,4 +4,12 @@
   color: #000;
   letter-spacing: 0.5px;
   margin: 12px 0;
+  white-space: pre-wrap;
+}
+
+.img_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
 }

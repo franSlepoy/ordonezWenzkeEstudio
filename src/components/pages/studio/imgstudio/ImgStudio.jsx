@@ -1,10 +1,11 @@
+import { Box } from "@mui/system";
 import imagen_studio from "../../../../../public/imagenes/studio/imagen_final.jpg";
-import imagenStyles from "./ImgStudio.module.css"
+import imagenStyles from "./ImgStudio.module.css";
 const ImgStudio = () => {
   return (
-    <div>
+    <Box sx={{ mt: 5 }}>
       <img src={imagen_studio} className={imagenStyles.imagenStudio} />
-    </div>
+    </Box>
   );
 };
 

@@ -30,8 +30,6 @@ const Home = () => {
           alt="una casa en la playa"
         />
       </Box>
-      <h3>Quiero ver que tipografia se pone</h3>
-      <p>Y ver si es igual a la original</p>
       <Box
         sx={{
           position: "absolute",

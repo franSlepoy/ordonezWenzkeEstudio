@@ -1,6 +1,9 @@
 import { Box } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 const InfoContact = () => {
+  const { t } = useTranslation();
+
   return (
     <Box
       sx={{
@@ -8,20 +11,28 @@ const InfoContact = () => {
         display: "flex",
         flexDirection: { md: "row", xs: "column" },
         justifyContent: "space-around",
+        gap: 3,
       }}
     >
       <Box
         sx={{
-          lineHeight: "35px",
-          fontSize: { md: "25px", xs: "20px" },
+          width: { md: "47%", xs: "100%" },
+          letterSpacing: "1px",
+          fontSize: { lg: "42px", md: "38px", sm: "32px", xs: "24px" },
+          lineHeight: { md: "54px", xs: "32px" },
         }}
       >
         <h6
           style={{
-            fontFamily: "'Work Sans', sans-serif",
+            fontFamily: "'Pragmatica', sans-serif",
+            fontSize: "17px",
+            lineHeight: "22px",
+            color: "#000",
+            fontWeight: "100",
+            letterSpacing: "0.5px",
           }}
         >
-          ADDRESS
+          {t("address")}
         </h6>
         <p>Concepción Arenal 4244, #133</p>
         <p>Barrio Parque Los Andes, </p>
@@ -29,16 +40,23 @@ const InfoContact = () => {
       </Box>
       <Box
         sx={{
-          fontSize: { md: "25px", xs: "20px" },
-          lineHeight: "35px",
+          width: { md: "47%", xs: "100%" },
+          letterSpacing: "1px",
+          fontSize: { lg: "42px", md: "38px", sm: "32px", xs: "24px" },
+          lineHeight: { md: "54px", xs: "32px" },
         }}
       >
         <h6
           style={{
-            fontFamily: "'Work Sans', sans-serif",
+            fontFamily: "'Pragmatica', sans-serif",
+            fontSize: "17px",
+            lineHeight: "22px",
+            color: "#000",
+            letterSpacing: "0.5px",
+            fontWeight: "100",
           }}
         >
-          CONTACTO
+          {t("contact")}
         </h6>
         <p>+54 9 11 5101 5553</p>
         <p>info@ordonezwenzke.com</p>

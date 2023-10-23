@@ -7,12 +7,12 @@ import InfoContact from "./infoContact/InfoContact";
 const StudioContainer = () => {
   return (
     <Box
-      width={"90%"}
+      width={"93%"}
       m={"auto"}
       sx={{
-        borderLeft: "solid black 1px",
-        borderRight: "solid black 1px",
-        p: {md:4 , xs:1},
+        borderLeft: { md: "solid black 1.5px", xs: "none" },
+        borderRight: { md: "solid black 1.5px", xs: "none" },
+        p: { md: 4, xs: 1 },
       }}
     >
       <div>

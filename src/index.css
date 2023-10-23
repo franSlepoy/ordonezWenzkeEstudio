@@ -1,22 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap");
 /* Reemplazo por poynter-oldstyle-display  */
 
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;1,600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;1,600&display=swap");
 /* Reemplazo por PRAGMATICA */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
-  font-family: 'PoynterOSDisp';
-  src: url('../public/fonts/PoynterOSDispRoman.ttf') format('truetype');
+  font-family: "PoynterOSDisp";
+  src: url("../public/fonts/PoynterOSDispRoman.ttf") format("truetype");
   /* Puedes especificar más formatos aquí si lo deseas, como woff2, woff, etc. */
 }
 
+@font-face {
+  font-family: "Pragmatica";
+  src: url("../public/fonts/PragmaticaLight.otf") format("opentype");
+  font-weight: 100;
+}
+
 body {
-  font-family: 'PoynterOSDisp', sans-serif;
+  font-family: "PoynterOSDisp", sans-serif;
 }
