@@ -1,4 +1,4 @@
-import { AppBar, Box, Button, Drawer, Hidden, Toolbar, Typography } from '@mui/material';
+import { AppBar, Box, Button, Drawer, Grid, Hidden, Toolbar, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import MenuIcon from '@mui/icons-material/Menu';
 import NavListDrawer from './NavListDrawe';
@@ -53,41 +53,45 @@ const NavBar = () => {
       </Hidden>
       
       <Hidden mdDown>
-      <Box
-        display={"flex"}
-        sx={{
-          alignItems: "center",
-          height: "100vh",
-          justifyContent: "space-between",
-          fontFamily: "sans-serif",
-          fontSize: "12px",
-          lineHeight: "12px",
-          color: "#1d1d1d",
-        }}
-      >
-        <Button onClick={cambiarAEspanol} data-i18n="es">
-          <Box>
-            <Typography>
-              e
-            </Typography>
-            <Typography>
-              s
-            </Typography>
-          </Box>
-        </Button>
-
-        <Button onClick={cambiarAIngles} data-i18n="en">
-          <Box>
-            <Typography>
-              e
-            </Typography>
-            <Typography>
-              n
-            </Typography>
-          </Box>
-        </Button>
-      </Box>
-      </Hidden>
+      <AppBar position='fixed' sx={{ width: "100%" }}>
+        <Grid container justifyContent="space-between" sx={{ position: "fixed", top: "50%" }}>
+          <Grid item>
+            <Button onClick={cambiarAEspanol} data-i18n="es">
+              <Box sx={{
+                fontFamily: "sans-serif",
+                fontSize: "12px",
+                lineHeight: "12px",
+                color: "#1d1d1d"
+              }}>
+                <Typography>
+                  e
+                </Typography>
+                <Typography>
+                  s
+                </Typography>
+              </Box>
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button onClick={cambiarAIngles} data-i18n="en">
+              <Box sx={{
+                fontFamily: "sans-serif",
+                fontSize: "12px",
+                lineHeight: "12px",
+                color: "#1d1d1d",
+              }}>
+                <Typography>
+                  e
+                </Typography>
+                <Typography>
+                  n
+                </Typography>
+              </Box>
+            </Button>
+          </Grid>
+        </Grid>
+      </AppBar>
+    </Hidden>
 
       <Hidden mdUp>
       <AppBar position="fixed" sx={{ boxShadow: 0, bgcolor: "white" }}>
