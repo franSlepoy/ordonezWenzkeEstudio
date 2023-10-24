@@ -7,6 +7,7 @@ import InfoContact from "./infoContact/InfoContact";
 const StudioContainer = () => {
   return (
     <Box
+      id="studio"
       width={"93%"}
       m={"auto"}
       sx={{
@@ -15,7 +16,7 @@ const StudioContainer = () => {
         p: { md: 4, xs: 1 },
       }}
     >
-      <div>
+      <div style={{ marginTop: "50px" }}>
         <TextInitial />
         <OW />
         <ImgStudio />
