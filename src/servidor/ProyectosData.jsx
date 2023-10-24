@@ -28,7 +28,7 @@ export const ProyectosData = [
     },
     {id: 7,
         imagen: "/imagenes/proyectos/proyectos7.jpg", 
-         titulo: "Proyectos",
+         titulo: "PROYECTOS",
     },
     {id: 8,
         imagen: "/imagenes/proyectos/proyectos8.jpg", 

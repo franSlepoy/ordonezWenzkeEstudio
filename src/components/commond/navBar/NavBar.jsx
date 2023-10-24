@@ -1,6 +1,8 @@
-import { AppBar, Box, Button, Hidden, Toolbar, Typography } from '@mui/material';
-import React, { useEffect, useState } from 'react';
+import { AppBar, Box, Button, Drawer, Hidden, Toolbar, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+import MenuIcon from '@mui/icons-material/Menu';
+import NavListDrawer from './NavListDrawe';
+import { useState } from 'react';
 
 const NavBar = () => {
   const { t, i18n } = useTranslation();
@@ -14,10 +16,12 @@ const NavBar = () => {
   const cambiarAIngles = () => {
     i18n.changeLanguage('en');
   };
+  
+  const [open, setOpen]= useState(false);
 
   return (
     <>
-      <Hidden smDown>
+      <Hidden mdDown>
         <AppBar position="fixed" sx={{ boxShadow: 0, bgcolor: "white" }}>
           <Toolbar sx={{ justifyContent: "space-between" }}>
             <Box width={"300px"} display={"flex"}>
@@ -47,7 +51,8 @@ const NavBar = () => {
           </Toolbar>
         </AppBar>
       </Hidden>
-
+      
+      <Hidden mdDown>
       <Box
         display={"flex"}
         sx={{
@@ -82,6 +87,38 @@ const NavBar = () => {
           </Box>
         </Button>
       </Box>
+      </Hidden>
+
+      <Hidden mdUp>
+      <AppBar position="fixed" sx={{ boxShadow: 0, bgcolor: "white" }}>
+          <Toolbar sx={{ justifyContent: "space-between" }}>
+           
+            <Box>
+              <img width={"50%"} src="/imagenes/ownegro.png" alt="" />
+            </Box>
+            <Box>
+             <Button onClick={()=> setOpen(true)}  sx={{color:"#1d1d1d", '&:hover': {
+            backgroundColor: 'transparent',
+          },}}> 
+               <MenuIcon fontSize="large"/> 
+             </Button>
+            </Box>
+
+
+
+            
+          </Toolbar>
+        </AppBar>
+        
+        <Drawer 
+    open={open}
+    anchor="top" 
+    onClose={()=> setOpen(false)}  
+   >
+   <NavListDrawer/>
+   </Drawer>
+      </Hidden>
+      
     </>
   );
 };

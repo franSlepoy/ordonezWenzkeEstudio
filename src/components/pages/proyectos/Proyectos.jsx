@@ -20,7 +20,8 @@ const Proyectos = () => {
                     borderRight: "solid #666666 0.1px",
                     textAlign: "center",
                     position: 'relative',
-                    height:"100%"
+                    height:"100%",
+                    
                   }}
                 >
                   {hoveredItem === item ? (
@@ -60,7 +61,7 @@ const Proyectos = () => {
      </Hidden>
         
      <Hidden mdUp>
-     <Box width={"93%"} m={"auto"} >
+     <Box width={"98%"} m={"auto"} >
         <ImageList variant="classic" cols={1} gap={0}>
           {ProyectosData.map((item) => (
             <ImageListItem key={item.id} onMouseEnter={() => setHoveredItem(item)} onMouseLeave={() => setHoveredItem(null)}>

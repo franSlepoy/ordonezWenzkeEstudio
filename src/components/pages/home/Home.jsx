@@ -41,7 +41,7 @@ const Home = () => {
           transition: "opacity 0.3s",
         }}
       >
-        <img width={"600px"} src="public/imagenes/owblanco.png" alt="" />
+        <img width={"100%"} src="public/imagenes/owblanco.png" alt="" />
       </Box>
 
       <NavBar />

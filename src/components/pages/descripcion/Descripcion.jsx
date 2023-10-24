@@ -12,11 +12,11 @@ const Descripcion = () => {
       <NavBar />
       <Box
         sx={{
-          borderLeft: "solid black 1px",
-          borderRight: "solid black 1px",
+
           width: "95%",
           m: "auto",
           mb: 3,
+          mt:8,
         }}
       >
         <Carousel sx={{ width: "95%", m: "auto" }}>
