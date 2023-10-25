@@ -16,10 +16,10 @@ const Descripcion = () => {
           width: "95%",
           m: "auto",
           mb: 3,
-          mt:8,
+          mt:12,
         }}
       >
-        <Carousel sx={{ width: "95%", m: "auto" }}>
+        <Carousel  sx={{ width: "95%", m: "auto" }}>
           {ProyectosData.map((proyecto) => (
             <Box key={proyecto.id}>
               <ImgCard imagen={proyecto.imagen} />

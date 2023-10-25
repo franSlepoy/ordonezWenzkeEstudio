@@ -60,7 +60,7 @@ const NavBar = () => {
               ></Box>
             </Box>
 
-            <Box>
+            <Box >
               <img width={"300px"} src="/imagenes/ownegro.png" alt="" />
             </Box>
 
