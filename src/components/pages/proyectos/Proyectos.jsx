@@ -15,6 +15,7 @@ const Proyectos = () => {
           sx={{
             borderLeft: "solid #666666 0.1px",
             borderRight: "solid #666666 0.1px",
+            
           }}
         >
           <ImageList variant="classic" cols={3} gap={0}>
@@ -48,7 +49,7 @@ const Proyectos = () => {
                           width: "75%",
                           height: "100%",
                           backgroundColor: hoveredItem === item ? "#e2e2c7" : "#e2e2c7",
-                          transition: "background-color 3s",
+                          transition: "background-color 1s",
                           "&:hover": {
                             backgroundColor: "transparent", // Cambia a "transparent" o cualquier otro color deseado
                           },
@@ -92,10 +93,7 @@ const Proyectos = () => {
                 onMouseEnter={() => setHoveredItem(item)}
                 onMouseLeave={() => setHoveredItem(null)}
               >
-                <a
-                  href={"/description"}
-                  style={{ textDecoration: "none", position: "relative" }}
-                >
+                
                   <Box
                     sx={{
                       p: 4,
@@ -118,6 +116,10 @@ const Proyectos = () => {
                           
                         }}
                       >
+                        <a
+                  href={"/description"}
+                  style={{ textDecoration: "none", position: "relative" }}
+                >
                         <Typography
                           sx={{
                             fontFamily: "Pragmatica",
@@ -129,6 +131,7 @@ const Proyectos = () => {
                         >
                           {item.titulo}
                         </Typography>
+                        </a>
                       </Box>
                     ) : (
                       <img
@@ -141,7 +144,7 @@ const Proyectos = () => {
                       />
                     )}
                   </Box>
-                </a>
+               
                 <Typography
                   sx={{
                     fontFamily: "Pragmatica",
