@@ -111,9 +111,10 @@ const NavBar = () => {
 						sx={{ position: "fixed", top: "50%" }}
 					>
 						<Grid item>
-							<Button 
+							<Button   disableRipple 
               sx={{    "&:hover": {
                 backgroundColor: 'transparent',
+                transition: 'none',
               }}}
               style={{
                
@@ -135,9 +136,10 @@ const NavBar = () => {
 							</Button>
 						</Grid>
 						<Grid item>
-							<Button 
+							<Button   disableRipple 
               sx={{    "&:hover": {
                 backgroundColor: 'transparent',
+                transition: 'none',
               }}}
               style={{
                    cursor: 'url("data:image/svg+xml;charset=utf-8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'24\' height=\'24\' fill=\'%23e2e2c7\'><circle cx=\'12\' cy=\'12\' r=\'10\' /></svg>") 12 12, auto'

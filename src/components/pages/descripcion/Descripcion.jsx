@@ -1,29 +1,47 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
 import { ProyectosData } from "../../../servidor/ProyectosData";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import ImgCard from "../../commond/imgCard/ImgCard";
-import TextoTituloCard from "../../commond/textoTituloCard/TextoTituloCard";
-import NavBar from "../../commond/navBar/NavBar";
+
 
 const Descripcion = () => {
   return (
     <>
-      <NavBar />
+     <Box mt={6} ml={6} mb={6}>
+     <a href="/">
+									<Typography sx={{fontSize: "16px",
+										color: "#000",
+										underline: "none",
+										fontFamily: "Pragmatica",
+										textDecoration: "none",}}>
+                      VOLVER
+                  </Typography>
+								</a>
+     </Box>
+     
       <Box
         sx={{
-
-          width: "95%",
+          
+          width: "98%",
           m: "auto",
           mb: 3,
-          mt:12,
+          
         }}
       >
-        <Carousel  sx={{ width: "95%", m: "auto" }}>
+        <Carousel indicators={false}
+  navButtonsProps={{
+    style: {
+      display: "none",
+    },
+  }}  
+  animation="fade"
+  timeout={1}
+    sx={{ width: "95%", m: "auto" }}>
           {ProyectosData.map((proyecto) => (
             <Box key={proyecto.id}>
               <ImgCard imagen={proyecto.imagen} />
-              <TextoTituloCard titulo={proyecto.titulo} />
+             
             </Box>
           ))}
         </Carousel>
