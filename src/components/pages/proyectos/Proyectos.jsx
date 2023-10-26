@@ -46,9 +46,12 @@ const Proyectos = () => {
                           justifyContent: "center",
                           margin: "auto",
                           width: "75%",
-                          height: "380px",
-                          backgroundColor: "#e2e2c7",
-                          transition: "background-color 0.5s",
+                          height: "100%",
+                          backgroundColor: hoveredItem === item ? "#e2e2c7" : "#e2e2c7",
+                          transition: "background-color 3s",
+                          "&:hover": {
+                            backgroundColor: "transparent", // Cambia a "transparent" o cualquier otro color deseado
+                          },
                         }}
                       >
                         <Typography
@@ -112,7 +115,7 @@ const Proyectos = () => {
                           width: "100%",
                           height: "440px",
                           backgroundColor: "#e2e2c7",
-                          transition: "background-color 0.5s",
+                          
                         }}
                       >
                         <Typography
