@@ -14,6 +14,7 @@ const OW = () => {
         flexDirection: { md: "row", xs: "column" },
         gap: 4,
         justifyContent: "space-around",
+       
       }}
     >
       <Box

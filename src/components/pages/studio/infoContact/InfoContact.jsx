@@ -59,8 +59,14 @@ const InfoContact = () => {
           {t("contact")}
         </h6>
         <p>+54 9 11 5101 5553</p>
-        <p>info@ordonezwenzke.com</p>
-        <p>@ordonezwenzke_ow</p>
+        <p>  
+          <a style={{ textDecoration: 'none', color: 'inherit' }} target="_blank" href="mailto:info@ordonezwenzke.com">info@ordonezwenzke.com</a> 
+        </p>
+     
+       
+        <p >  
+        <a style={{ textDecoration: 'none', color: 'inherit' }} target="_blank" href="https://www.instagram.com/ordonezwenzke_ow/">@ordonezwenzke_ow</a> 
+        </p>
       </Box>
     </Box>
   );

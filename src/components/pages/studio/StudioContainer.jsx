@@ -11,8 +11,8 @@ const StudioContainer = () => {
       width={"93%"}
       m={"auto"}
       sx={{
-        borderLeft: { md: "solid black 1.5px", xs: "none" },
-        borderRight: { md: "solid black 1.5px", xs: "none" },
+        borderLeft: { md: "solid black 2px", xs: "none" },
+        borderRight: { md: "solid black 2px", xs: "none" },
         p: { md: 4, xs: 1 },
       }}
     >

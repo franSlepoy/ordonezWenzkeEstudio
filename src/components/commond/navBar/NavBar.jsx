@@ -63,7 +63,7 @@ const NavBar = () => {
 						}}
 					>
 						<Toolbar sx={{ justifyContent: "space-between" }}>
-							<Box /* width={"300px"} */ display={"flex"}>
+							<Box  width={"33,3%"} display={"flex"}>
 								<a
 									href="#projects"
 									style={{
@@ -76,22 +76,13 @@ const NavBar = () => {
 								>
 									{t("tituloNavBarIzquierda")}
 								</a>
-								<Box
-									sx={{
-										ml: 2,
-										width: "20px",
-										height: "20px",
-										borderRadius: "100%",
-										bgcolor: "#e2e2c7",
-									}}
-								></Box>
 							</Box>
 
-							<Box>
-								<img width={"300px"} src={logo_ow_negro} alt="" />
+							<Box width={"26%"}  >
+								<img width={"320px"} src={logo_ow_negro} alt="" />
 							</Box>
 
-							<Box /* width={"300px"} */>
+							<Box  width={"33,3%"}  >
 								<a
 									href="#studio"
 									style={{
@@ -120,37 +111,52 @@ const NavBar = () => {
 						sx={{ position: "fixed", top: "50%" }}
 					>
 						<Grid item>
-							<Button style={{
+							<Button 
+              sx={{    "&:hover": {
+                backgroundColor: 'transparent',
+              }}}
+              style={{
+               
                cursor: 'url("data:image/svg+xml;charset=utf-8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'24\' height=\'24\' fill=\'%23e2e2c7\'><circle cx=\'12\' cy=\'12\' r=\'10\' /></svg>") 12 12, auto'
                           }}
                         onClick={cambiarAEspanol} data-i18n="es">
 								<Box
 									sx={{
+                    
 										fontFamily: "sans-serif",
-										fontSize: "12px",
+										
 										lineHeight: "12px",
 										color: "#1d1d1d",
 									}}
 								>
-									<Typography>e</Typography>
-									<Typography>s</Typography>
+									<Typography sx={{fontSize:"12px", fontFamily: "sans-serif", lineHeight: "12px",color: "#1d1d1d" }}>e</Typography>
+									<Typography sx={{fontSize:"12px", fontFamily: "sans-serif", lineHeight: "12px",color: "#1d1d1d" }}>s</Typography>
 								</Box>
 							</Button>
 						</Grid>
 						<Grid item>
-							<Button style={{
+							<Button 
+              sx={{    "&:hover": {
+                backgroundColor: 'transparent',
+              }}}
+              style={{
                    cursor: 'url("data:image/svg+xml;charset=utf-8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'24\' height=\'24\' fill=\'%23e2e2c7\'><circle cx=\'12\' cy=\'12\' r=\'10\' /></svg>") 12 12, auto'
                     }} onClick={cambiarAIngles} data-i18n="en">
 								<Box
-									sx={{
+									
+								>
+									<Typography sx={{
 										fontFamily: "sans-serif",
 										fontSize: "12px",
 										lineHeight: "12px",
 										color: "#1d1d1d",
-									}}
-								>
-									<Typography>e</Typography>
-									<Typography>n</Typography>
+									}}>e</Typography>
+									<Typography sx={{
+										fontFamily: "sans-serif",
+										fontSize: "12px",
+										lineHeight: "12px",
+										color: "#1d1d1d",
+									}}>n</Typography>
 								</Box>
 							</Button>
 						</Grid>
