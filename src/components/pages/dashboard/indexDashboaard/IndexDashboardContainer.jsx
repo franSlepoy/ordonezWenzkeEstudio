@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import { Link, Outlet } from "react-router-dom";
+import { AuthContext } from "../../../../context/AuthContext";
+import { Button } from "@mui/material";
 
 const IndexDashboardContainer = () => {
+	const { user, handleLogOut } = useContext(AuthContext);
 	return (
 		<>
 			<div
@@ -13,8 +17,12 @@ const IndexDashboardContainer = () => {
 				}}
 			>
 				<h2>Dashboard Container</h2>
-				<Link to="/dashboard-settings">ADMIN</Link>
-				<p>Logout</p>
+				{user && user.rol === "admin" && (
+					<div>
+						<Link to="/dashboard-settings">ADMIN</Link>
+						<Button onClick={handleLogOut}>Logout</Button>
+					</div>
+				)}
 			</div>
 			<div>
 				<Outlet />

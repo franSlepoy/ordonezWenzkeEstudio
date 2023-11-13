@@ -8,26 +8,42 @@ import SettingsAdmin from "./components/pages/dashboard/settingsAdmin/SettingsAd
 import AddProjects from "./components/pages/dashboard/agregarProjects/AddProjects";
 import EditStudio from "./components/pages/dashboard/EditStudio/EditStudio";
 import EditInicio from "./components/pages/dashboard/editInicio/EditInicio";
+import FormAdmin from "./components/pages/dashboard/formAdmin/FormAdmin";
+import AuthContextComponent from "./context/AuthContext";
+import RoutesManageAdmin from "./routes/RoutesManageAdmin";
+import ToolbarDash from "./components/pages/dashboard/toolBar/ToolBarDash";
+import ForgotPassword from "./components/pages/forgotPassword/ForgotPassword";
 
 function App() {
 	return (
 		<BrowserRouter>
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/description" element={<Descripcion />} />
+			<AuthContextComponent>
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/description" element={<Descripcion />} />
 
-				<Route element={<IndexDashboardContainer />}>
-					<Route path="/dashboard2" element={<IndexDash2 />} />
-					<Route
-						path="/dashboard-projectsList"
-						element={<ProjectsListContainer />}
-					/>
-					<Route path="/dashboard-settings" element={<SettingsAdmin />} />
-					<Route path="/dashboard-addProjects" element={<AddProjects />} />
-					<Route path="/dashboard-editStudio" element={<EditStudio />} />
-					<Route path="/dashboard-editInicio" element={<EditInicio />} />
-				</Route>
-			</Routes>
+					<Route element={<IndexDashboardContainer />}>
+						<Route path="/form-admin" element={<FormAdmin />} />
+						<Route path="/forgot-password" element={<ForgotPassword />} />
+						<Route element={<RoutesManageAdmin />}>
+							<Route element={<ToolbarDash />}>
+								<Route path="/dashboard2" element={<IndexDash2 />} />
+								<Route
+									path="/dashboard-projects"
+									element={<ProjectsListContainer />}
+								/>
+								<Route path="/dashboard-settings" element={<SettingsAdmin />} />
+								<Route
+									path="/dashboard-addProjects"
+									element={<AddProjects />}
+								/>
+								<Route path="/dashboard-editStudio" element={<EditStudio />} />
+								<Route path="/dashboard-editInicio" element={<EditInicio />} />
+							</Route>
+						</Route>
+					</Route>
+				</Routes>
+			</AuthContextComponent>
 		</BrowserRouter>
 	);
 }
