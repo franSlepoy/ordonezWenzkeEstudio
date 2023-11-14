@@ -43,6 +43,7 @@ const FormAdmin = () => {
 				email: user.email,
 				accessToken: user.accessToken,
 				rol: userDoc.data().rol,
+				name: userDoc.data().name,
 			};
 			handleLogin(finalyUser);
 			navigate("/dashboard2");
@@ -56,78 +57,88 @@ const FormAdmin = () => {
 
 	const handleClickShowPassword = () => setShowPassword(!showPassword);
 
-	console.log(user);
+	console.log("user del context es: ", user);
 
 	return (
 		<div>
-			<form onSubmit={handleSubmit}>
-				<Grid
-					container
-					rowSpacing={2}
-					// alignItems="center"
-					justifyContent={"center"}
-				>
-					<Grid item xs={10} md={12}>
-						<TextField
-							name="email"
-							label="Email"
-							fullWidth
-							onChange={handleChange}
-						/>
-					</Grid>
-					<Grid item xs={10} md={12}>
-						<FormControl variant="outlined" fullWidth>
-							<InputLabel htmlFor="outlined-adornment-password">
-								Contraseña
-							</InputLabel>
-							<OutlinedInput
-								name="password"
-								onChange={handleChange}
-								id="outlined-adornment-password"
-								type={showPassword ? "text" : "password"}
-								endAdornment={
-									<InputAdornment position="end">
-										<IconButton
-											aria-label="toggle password visibility"
-											onClick={handleClickShowPassword}
-											edge="end"
-										>
-											{showPassword ? (
-												<VisibilityOff color="primary" />
-											) : (
-												<Visibility color="primary" />
-											)}
-										</IconButton>
-									</InputAdornment>
-								}
-								label="Contraseña"
-							/>
-						</FormControl>
-					</Grid>
-					<Link
-						to="/forgot-password"
-						style={{ color: "steelblue", marginTop: "10px" }}
+			{!user.accessToken && (
+				<form onSubmit={handleSubmit}>
+					<Grid
+						container
+						rowSpacing={2}
+						// alignItems="center"
+						justifyContent={"center"}
 					>
-						¿Olvidaste tu contraseña?
-					</Link>
-					<Grid container justifyContent="center" spacing={3} mt={2}>
-						<Grid item xs={10} md={5}>
-							<Button
-								variant="contained"
+						<Grid item xs={10} md={12}>
+							<TextField
+								name="email"
+								label="Email"
 								fullWidth
-								type="submit"
-								sx={{
-									color: "white",
-									textTransform: "none",
-									textShadow: "2px 2px 2px grey",
-								}}
-							>
-								Ingresar
-							</Button>
+								onChange={handleChange}
+							/>
+						</Grid>
+						<Grid item xs={10} md={12}>
+							<FormControl variant="outlined" fullWidth>
+								<InputLabel htmlFor="outlined-adornment-password">
+									Contraseña
+								</InputLabel>
+								<OutlinedInput
+									name="password"
+									onChange={handleChange}
+									id="outlined-adornment-password"
+									type={showPassword ? "text" : "password"}
+									endAdornment={
+										<InputAdornment position="end">
+											<IconButton
+												aria-label="toggle password visibility"
+												onClick={handleClickShowPassword}
+												edge="end"
+											>
+												{showPassword ? (
+													<VisibilityOff color="primary" />
+												) : (
+													<Visibility color="primary" />
+												)}
+											</IconButton>
+										</InputAdornment>
+									}
+									label="Contraseña"
+								/>
+							</FormControl>
+						</Grid>
+						<Link
+							to="/forgot-password"
+							style={{ color: "steelblue", marginTop: "10px" }}
+						>
+							¿Olvidaste tu contraseña?
+						</Link>
+						<Grid container justifyContent="center" spacing={3} mt={2}>
+							<Grid item xs={10} md={5}>
+								<Button
+									variant="contained"
+									fullWidth
+									type="submit"
+									sx={{
+										color: "white",
+										textTransform: "none",
+										textShadow: "2px 2px 2px grey",
+									}}
+								>
+									Ingresar
+								</Button>
+							</Grid>
 						</Grid>
 					</Grid>
-				</Grid>
-			</form>
+				</form>
+			)}
+
+			{user.accessToken && (
+				<h2>
+					Ya te encuentras loggeado con la cuenta de :{" "}
+					<span> {user.name} </span>{" "}
+					<Link to="/dashboard2">Volver al dashboard</Link>
+				</h2>
+			)}
 		</div>
 	);
 };
