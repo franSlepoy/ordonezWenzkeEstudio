@@ -14,6 +14,7 @@ import RoutesManageAdmin from "./routes/RoutesManageAdmin";
 import ToolbarDash from "./components/pages/dashboard/toolBar/ToolBarDash";
 import ForgotPassword from "./components/pages/forgotPassword/ForgotPassword";
 import EditStudio2 from "./components/pages/dashboard/editStudio/EditStudio2";
+import EditStudio3 from "./components/pages/dashboard/editStudio/ediStudio3";
 
 function App() {
 	return (
@@ -38,7 +39,7 @@ function App() {
 									path="/dashboard-addProjects"
 									element={<AddProjects />}
 								/>
-								<Route path="/dashboard-editStudio" element={<EditStudio2 />} />
+								<Route path="/dashboard-editStudio" element={<EditStudio3 />} />
 							</Route>
 						</Route>
 					</Route>
@@ -49,5 +50,3 @@ function App() {
 }
 
 export default App;
-
-

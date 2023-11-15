@@ -1,7 +1,12 @@
 import { collection, doc, getDoc, updateDoc } from "firebase/firestore";
+import { deleteObject, ref } from "firebase/storage";
 import { useEffect } from "react";
 import { useState } from "react";
-import { db, uploadFile } from "../../../../firebaseConfig/FirebaseConfig";
+import {
+	db,
+	storage,
+	uploadFile,
+} from "../../../../firebaseConfig/FirebaseConfig";
 import imagen_default from "../../../../../public/imagenes/defaults/imagen_default.jfif";
 import video_default from "../../../../../public/imagenes/defaults/video_default.png";
 
@@ -39,24 +44,28 @@ const EditInicio = () => {
 	};
 
 	const handleDelete = async (field) => {
+		// Obtén la URL de la imagen
+
+		const url = data[field];
+		const desertRef = ref(storage, url);
+		await deleteObject(desertRef);
+
 		if (field == "image_desktop" || field == "image_mobile") {
 			setData({
 				...data,
-				[field]:
-					"https://firebasestorage.googleapis.com/v0/b/ow-backend.appspot.com/o/defaults%2Fimagen_default.jfif?alt=media&token=773abf15-5965-4673-8724-ab92725f65a6&_gl=1*1whd9t7*_ga*MTY3NzI5MDE1OC4xNjg4NTgxNzg2*_ga_CW55HF8NVT*MTY5OTk4MjY0My45My4xLjE2OTk5ODI5NDUuNjAuMC4w.",
+				[field]: "",
 			});
 		} else {
 			setData({
 				...data,
-				[field]:
-					"https://firebasestorage.googleapis.com/v0/b/ow-backend.appspot.com/o/defaults%2Fvideo_default.png?alt=media&token=c01a66e4-d620-4c77-8b21-d7ee7b36e12d&_gl=1*bcux98*_ga*MTY3NzI5MDE1OC4xNjg4NTgxNzg2*_ga_CW55HF8NVT*MTY5OTk4MjY0My45My4xLjE2OTk5ODI5NDguNTcuMC4w",
+				[field]: "",
 			});
 		}
+
 		setIsImageUpload(true);
 	};
 
-	console.log("data es : ", data);
-	console.log("file es : ", files);
+	console.log(data);
 
 	return (
 		<div>
