@@ -8,7 +8,7 @@ import {
 import { deleteObject, ref } from "firebase/storage";
 import imagen_default from "../../../../../public/imagenes/defaults/imagen_default.jfif";
 
-// ESTOY USANDO UNA BASE DE DATOS DE PRUEBA --> LUEGO CAMBIAR LA DE TEST POR LA POSTA !! 
+// ESTOY USANDO UNA BASE DE DATOS DE PRUEBA --> LUEGO CAMBIAR LA DE TEST POR LA POSTA !!
 
 const EditStudio3 = () => {
 	const [data, setData] = useState({
@@ -24,6 +24,12 @@ const EditStudio3 = () => {
 		},
 		modulo3: {
 			url: "",
+		},
+		modulo4: {
+			col_izq_en: "",
+			col_izq_es: "",
+			col_der_en: "",
+			col_der_es: "",
 		},
 	});
 	const [file, setFile] = useState(data.modulo3.url);
@@ -197,6 +203,54 @@ const EditStudio3 = () => {
 				</div>
 				<div>
 					<p>Modulo 4</p>
+					<div>
+						<div>
+							<p>Columna izquierda</p>
+							<textarea
+								name=""
+								id=""
+								cols="30"
+								rows="10"
+								value={data.modulo4.col_izq_es}
+								onChange={(e) =>
+									handleChange("modulo4.col_izq_es", e.target.value)
+								}
+							></textarea>
+							<textarea
+								name=""
+								id=""
+								cols="30"
+								rows="10"
+								value={data.modulo4.col_izq_en}
+								onChange={(e) =>
+									handleChange("modulo4.col_izq_en", e.target.value)
+								}
+							></textarea>
+						</div>
+						<div>
+							<p>Columna derecha</p>
+							<textarea
+								name=""
+								id=""
+								cols="30"
+								rows="10"
+								value={data.modulo4.col_der_es}
+								onChange={(e) =>
+									handleChange("modulo4.col_der_es", e.target.value)
+								}
+							></textarea>
+							<textarea
+								name=""
+								id=""
+								cols="30"
+								rows="10"
+								value={data.modulo4.col_der_en}
+								onChange={(e) =>
+									handleChange("modulo4.col_der_en", e.target.value)
+								}
+							></textarea>
+						</div>
+					</div>
 				</div>
 				<button onClick={handleSave}>Guardar Cambios</button>
 			</div>
