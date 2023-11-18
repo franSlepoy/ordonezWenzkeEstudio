@@ -192,6 +192,9 @@ const EditStudio3 = () => {
 							Cargar imagen
 						</button>
 					)}
+					{loadingImage && <p>Cargando imagen...</p>}
+					{isImageUpload && <p>¡Imagen subida!</p>}
+
 					{data.modulo3.url && (
 						<button
 							onClick={() => handleDelete(data.modulo3.url)}

@@ -5,16 +5,14 @@ import IndexDashboardContainer from "./components/pages/dashboard/indexDashboaar
 import IndexDash2 from "./components/pages/dashboard/indexDashboaard/IndexDash2";
 import ProjectsListContainer from "./components/pages/dashboard/projectsList/ProjectsListContainer";
 import SettingsAdmin from "./components/pages/dashboard/settingsAdmin/SettingsAdmin";
-import AddProjects from "./components/pages/dashboard/agregarProjects/AddProjects";
-import EditStudio from "./components/pages/dashboard/EditStudio/EditStudio";
 import EditInicio from "./components/pages/dashboard/editInicio/EditInicio";
 import FormAdmin from "./components/pages/dashboard/formAdmin/FormAdmin";
 import AuthContextComponent from "./context/AuthContext";
 import RoutesManageAdmin from "./routes/RoutesManageAdmin";
 import ToolbarDash from "./components/pages/dashboard/toolBar/ToolBarDash";
 import ForgotPassword from "./components/pages/forgotPassword/ForgotPassword";
-import EditStudio2 from "./components/pages/dashboard/editStudio/EditStudio2";
 import EditStudio3 from "./components/pages/dashboard/editStudio/ediStudio3";
+import AddProjectsContainer from "./components/pages/dashboard/agregarProjects/AddProjects";
 
 function App() {
 	return (
@@ -37,7 +35,7 @@ function App() {
 								<Route path="/dashboard-settings" element={<SettingsAdmin />} />
 								<Route
 									path="/dashboard-addProjects"
-									element={<AddProjects />}
+									element={<AddProjectsContainer />}
 								/>
 								<Route path="/dashboard-editStudio" element={<EditStudio3 />} />
 							</Route>
