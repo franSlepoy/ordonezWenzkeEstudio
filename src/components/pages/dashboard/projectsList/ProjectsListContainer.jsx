@@ -8,7 +8,7 @@ const ProjectsListContainer = () => {
 	const [projects, setProjects] = useState([]);
 
 	useEffect(() => {
-		let refCollection = collection(db, "projects");
+		let refCollection = collection(db, "projects_test");
 		getDocs(refCollection)
 			.then((res) => {
 				const projectsArr = res.docs.map((project) => {
@@ -23,7 +23,7 @@ const ProjectsListContainer = () => {
 	}, []);
 
 	console.log(projects);
-	return <ProjectsList />;
+	return <ProjectsList projects={projects} />;
 };
 
 export default ProjectsListContainer;
